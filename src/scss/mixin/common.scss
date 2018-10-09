@@ -1,0 +1,15 @@
+@import '../var';
+
+@mixin bgImg($width, $height, $src){
+    display: inline-block;
+    width: $width + rem;
+    height: $height + rem;
+    background: url($baseImgUrl + $src) no-repeat;
+    background-size: cover;
+}
+
+@mixin img($width, $height){
+    display: inline-block;
+    width: $width + rem;
+    height: $height + rem;
+}
