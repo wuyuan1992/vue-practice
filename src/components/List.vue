@@ -1,8 +1,7 @@
 <template>
   <ul class="list">
     <li v-for="li in list" :key="li.id" @click="()=>{ $emit('click', li) }">
-      <!-- <img src="../assets/imgs/logo.png" alt=""> -->
-      <img :src="Logo" alt="">
+      <img src="../assets/imgs/logo.png" alt="">
 
       <h3>{{ li.title }}</h3>
     </li>
@@ -10,8 +9,7 @@
 </template>
 
 <script>
-// import Logo from 'Imgs/logo.png';
-import { Logo } from 'Services/imgs';
+import Logo from 'Imgs/logo.png';
 
 export default {
   name: 'List',
