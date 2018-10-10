@@ -1,7 +1,8 @@
 <template>
   <ul class="list">
-    <li v-for="li in list" :key="li.id" @click="()=>{ $emit('click', li) }">
-      <img src="../assets/imgs/logo.png" alt="">
+    <li v-for="li in items" :key="li.id" @click="()=>{ $emit('click', li) }">
+      <!-- <img :src="`/imgs/${li.icon}`" alt=""> -->
+      <img :src="li.icon" alt="">
 
       <h3>{{ li.title }}</h3>
     </li>
@@ -9,13 +10,19 @@
 </template>
 
 <script>
-import Logo from 'Imgs/logo.png';
-
 export default {
   name: 'List',
   data:()=>({
-    Logo
+    
   }),
+  computed:{
+    items:function(){
+      return this.list.map(li => ({
+        ...li,
+        icon: require(`Imgs/${li.icon}`)
+      }))
+    }
+  },
   props: {
     list: Array
   }

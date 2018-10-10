@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default class Http{
 
-    static BASE_URL = '/base';
+    static BASE_URL = '';
 
     static get(url, data) {
         return new Promise(async (resolve, reject) => {

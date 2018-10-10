@@ -63,8 +63,8 @@ export default {
     }
 
     li.active{
-      background:rgb(175, 226, 250);
-      color:#238876;
+          background: #f5f5f5;
+          color: #002e4a;
     }
     li+li{
       border-left:1px solid #EDEDED;
